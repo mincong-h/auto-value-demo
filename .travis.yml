@@ -1,0 +1,11 @@
+language: java
+matrix:
+  include:
+  - jdk: oraclejdk8
+  - jdk: oraclejdk9
+  - jdk: openjdk10
+  - jdk: openjdk11
+install:
+  - mvn -B -q install -DskipTests=true
+script:
+  - mvn clean verify
